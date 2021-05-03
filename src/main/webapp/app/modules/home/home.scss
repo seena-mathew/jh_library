@@ -8,3 +8,26 @@ Main page styles
   background: url('../../../content/images/jhipster_family_member_2.svg') no-repeat center top;
   background-size: contain;
 }
+.search-box {
+  border-radius: 25px;
+  background: #e5eadf;
+  padding: 20px;
+  width: 615px;
+  height: 50px;
+}
+.search-button {
+  border-radius: 25px;
+  background: #f6a515;
+  height: 50px;
+}
+.search {
+  display: inline;
+}
+
+.ext-link {
+  padding-top: 40px;
+}
+.center {
+  top: 48px;
+  left: 30px;
+}

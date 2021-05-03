@@ -18,6 +18,7 @@ import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
+import Sidebar from 'app/shared/layout/sidebar/sidebar';
 
 const baseHref = document.querySelector('base').getAttribute('href').replace(/\/$/, '');
 
@@ -29,16 +30,26 @@ export const App = (props: IAppProps) => {
     props.getProfile();
   }, []);
 
-  const paddingTop = '60px';
+  const paddingTop = '70px';
+  const paddingLeft = '220px';
   return (
     <Router basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
+      <div>
+        <ErrorBoundary>
+          <Sidebar
+            isAuthenticated={props.isAuthenticated}
+            isAdmin={props.isAdmin}
+            isInProduction={props.isInProduction}
+            isOpenAPIEnabled={props.isOpenAPIEnabled}
+          />
+        </ErrorBoundary>
+      </div>
+      <div className="app-container" style={{ paddingTop, paddingLeft }}>
         <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" />
         <ErrorBoundary>
           <Header
             isAuthenticated={props.isAuthenticated}
             isAdmin={props.isAdmin}
-            ribbonEnv={props.ribbonEnv}
             isInProduction={props.isInProduction}
             isOpenAPIEnabled={props.isOpenAPIEnabled}
           />
@@ -49,7 +60,6 @@ export const App = (props: IAppProps) => {
               <AppRoutes />
             </ErrorBoundary>
           </Card>
-          <Footer />
         </div>
       </div>
     </Router>

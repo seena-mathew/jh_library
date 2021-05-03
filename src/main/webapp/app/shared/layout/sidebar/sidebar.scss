@@ -1,0 +1,14 @@
+.side-bar {
+  position: fixed;
+  width: 230px;
+  height: 590px;
+  top: 78px;
+  padding-top: 30px;
+  a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}

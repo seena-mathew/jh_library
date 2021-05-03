@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #533f03;
+  color: #c3b9aa;
   font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ a {
     overflow-x: hidden;
     padding: 1rem;
     .card {
-      padding: 1rem;
+      padding: 2rem;
     }
     .view-routes {
       height: 100%;
@@ -135,6 +135,7 @@ Generic styles
     @if $side== '' {
       .pad {
         padding: 10px !important;
+        top: 48px;
       }
     } @else {
       .pad {
