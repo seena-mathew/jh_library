@@ -41,6 +41,8 @@
     "packageFolder": "com/jhipster/library",
     "jwtSecretKey": "MmQ2ODBkN2UzYTVlNDQ1YWVkYmZjZGU3ZmNlMjdhM2IyMDBjMTc2ZGMxZWI1MTY0ODY5OGIxZDkyZGRhZDc1ZWVjNzJmMzEwOTgwZGUwNjFiMmFiMzRiNmViZjY0YzY1Y2ZmZTJkNGEzNzRlMmNjYzgxZTZjNzYzYTBjODY5MTQ=",
     "clientPackageManager": "npm",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["TestBlog"],
+    "lastLiquibaseTimestamp": 1620043937000
   }
 }

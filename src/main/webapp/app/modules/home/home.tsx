@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { Search } from 'app/shared/search/search';
 
 export type IHomeProp = StateProps;
 
@@ -26,14 +27,7 @@ export const Home = (props: IHomeProp) => {
       <Col md="9" className="center">
         <h2>JHipster Library</h2>
         <p className="lead">A library for JHipster documentation</p>
-        <div className="search">
-          <input className="search-box" type="text" placeholder="What do you want to search?" />
-          &nbsp;&nbsp;
-          <button onClick={search} type="submit" className="search-button">
-            Search &nbsp;
-            <FontAwesomeIcon icon={faSearch} />
-          </button>
-        </div>
+        <Search />
         <div className="ext-link">
           <p>If you have any question on JHipster:</p>
           <ul>

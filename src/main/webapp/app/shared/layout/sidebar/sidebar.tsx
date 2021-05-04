@@ -34,14 +34,17 @@ const Sidebar = (props: ISidebarProps) => {
     <div className="bg-primary side-bar">
       <Nav vertical>
         <Home />
+        {props.isAuthenticated && (
+          <NavItem>
+            <NavLink tag={Link} to={'/test-blog'}>
+              <FontAwesomeIcon icon={faCopy} className="mr-2" />
+              Test Blogs
+            </NavLink>
+          </NavItem>
+        )}
         {props.isAuthenticated && <SubMenu title="Blogs" icon={faCopy} items={submenus[0]} />}
         {props.isAuthenticated && <SubMenu title="Categories" icon={faCopy} items={submenus[0]} />}
-        {/*<NavItem>*/}
-        {/*  <NavLink tag={Link} to={"/about"}>*/}
-        {/*    <FontAwesomeIcon icon={faBriefcase} className="mr-2" />*/}
-        {/*    JHipster Official site*/}
-        {/*  </NavLink>*/}
-        {/*</NavItem>*/}
+        {/*{props.isAuthenticated && <EntitiesMenu />}*/}
       </Nav>
     </div>
   );

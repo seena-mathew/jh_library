@@ -1,0 +1,10 @@
+entity TestBlog {
+  title String required
+  content String required
+  createdOn Instant required
+  updatedOn Instant required
+  username String required
+}
+
+dto TestBlog with mapstruct
+service TestBlog with serviceClass
